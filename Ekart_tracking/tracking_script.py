@@ -1,10 +1,14 @@
 #!/usr/bin/env python3
 
-
+# %%
 import re
 import requests
 from bs4 import BeautifulSoup
 
+user_input = input("Enter the tracking ID : ")
+user_input = user_input.upper()
+
+# %%
 baseurl = "https://ekartlogistics.com/shipmenttrack/"
 
 headers = {
