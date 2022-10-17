@@ -5,3 +5,6 @@
 * Notify if status of tracking changes 
 
 
+* UPdating the script. 
+* The script takes the Ekart logistics tracking id as input from user 
+* Output to be shown would be decided later
