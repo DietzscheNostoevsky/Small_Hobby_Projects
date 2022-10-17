@@ -10,11 +10,14 @@ user_input = user_input.upper()
 
 # %%
 baseurl = "https://ekartlogistics.com/shipmenttrack/"
+URL = baseurl + user_input
+
+# %%
 
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36 QIHU 360SE'
 }
-f = requests.get(baseurl, headers=headers)
+f = requests.get(URL, headers=headers)
 if not f.ok:
     raise Exception("GET failed with status code {}".format(f.status_code))
 
