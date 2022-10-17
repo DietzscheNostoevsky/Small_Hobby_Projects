@@ -5,4 +5,3 @@
 * Notify if status of tracking changes 
 
 
-* Update : Not required presently, will add features when I order something
