@@ -121,23 +121,23 @@ class LoanCalculator:
 
     def computePayment(self):
 
-    monthlyPayment = self.getMonthlyPayment(
-        float(self.loanAmountVar.get()),
-        float(self.annualInterestRateVar.get()) / 1200,
-        int(self.numberOfYearsVar.get()))
+        monthlyPayment = self.getMonthlyPayment(
+            float(self.loanAmountVar.get()),
+            float(self.annualInterestRateVar.get()) / 1200,
+            int(self.numberOfYearsVar.get()))
 
-    self.monthlyPaymentVar.set(format(monthlyPayment, '10.2f'))
-    totalPayment = float(self.monthlyPaymentVar.get()) * 12 \
-        * int(self.numberOfYearsVar.get())
+        self.monthlyPaymentVar.set(format(monthlyPayment, '10.2f'))
+        totalPayment = float(self.monthlyPaymentVar.get()) * 12 \
+            * int(self.numberOfYearsVar.get())
 
-    self.totalPaymentVar.set(format(totalPayment, '10.2f'))
+        self.totalPaymentVar.set(format(totalPayment, '10.2f'))
 
     def getMonthlyPayment(self, loanAmount, monthlyInterestRate, numberOfYears):
         # compute the monthly payment.
-    monthlyPayment = loanAmount * monthlyInterestRate / (1
-                                                         - 1 / (1 + monthlyInterestRate) ** (numberOfYears * 12))
-    return monthlyPayment
-    root = Tk()  # create the widget
+        monthlyPayment = loanAmount * monthlyInterestRate / (1
+                                                             - 1 / (1 + monthlyInterestRate) ** (numberOfYears * 12))
+        return monthlyPayment
+        root = Tk()  # create the widget
 
 
 # call the class to run the program.
