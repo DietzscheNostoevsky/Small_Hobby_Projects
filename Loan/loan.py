@@ -63,9 +63,8 @@ def computePayment(self):
 
 
 def getMonthlyPayment(self, loanAmount, monthlyInterestRate, numberOfYears):
-    monthlyPayment = loanAmount * monthlyInterestRate /
-    (1 - 1 / (1 + monthlyInterestRate) **
-        (numberOfYears * 12))
+    monthlyPayment = loanAmount * monthlyInterestRate / (1 - 1 / (1 + monthlyInterestRate) **
+                                                         (numberOfYears * 12))
 
     return monthlyPayment
 
